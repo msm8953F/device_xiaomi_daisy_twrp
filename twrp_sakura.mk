@@ -7,16 +7,17 @@
 # Release name
 PRODUCT_RELEASE_NAME := sakura
 
-$(call inherit-product, build/target/product/embedded.mk)
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8953 \
-    ro.treble.enabled=true \
-    ro.bootimage.build.date.utc=1514797200 \
-    ro.build.date.utc=1514797200
+
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
@@ -24,7 +25,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sakura
-PRODUCT_NAME := omni_sakura
+PRODUCT_NAME := twrp_sakura
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 6 pro
 PRODUCT_MANUFACTURER := Xiaomi
