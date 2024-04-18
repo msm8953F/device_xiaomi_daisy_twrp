@@ -9,4 +9,9 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
 on boot
-    start health-hal-2-1
+    start health-hal-2-0
+
+on init
+    setprop prepdecrypt.loglevel 2
+
+import /init.recovery.qcom_decrypt.rc
