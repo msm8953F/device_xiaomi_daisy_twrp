@@ -73,10 +73,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
-# TWRP Notch handling
-TW_Y_OFFSET := 89
-TW_H_OFFSET := -89
-
 # TWRP Configuration
 RECOVERY_SDCARD_ON_DATA := true
 TW_THEME := portrait_hdpi
