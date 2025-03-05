@@ -7,7 +7,7 @@
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 SOONG_ALLOW_MISSING_DEPENDENCIES := true
 
-LOCAL_PATH := device/xiaomi/sakura
+LOCAL_PATH := device/xiaomi/daisy
 
 # Architecture
 TARGET_ARCH := arm64
@@ -37,8 +37,8 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_sakura
-TARGET_RECOVERY_DEVICE_MODULES := libinit_sakura
+TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_daisy
+TARGET_RECOVERY_DEVICE_MODULES := libinit_daisy
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive audit=0
