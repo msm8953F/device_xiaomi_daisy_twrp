@@ -47,6 +47,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DELETE_AROMAFM=1
 	export FOX_DELETE_INITD_ADDON=1
 	export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/mmcblk0p49"
+        ## daisy variables:
+        # Maintainer flags
+        export SHRP_MAINTAINER="FARHAN"
+	## OrangeFox variables:
+        # General information
+        export FOX_VERSION="R11.1"
+        export OF_MAINTAINER="FARHAN"
+        export OF_MAINTAINER_AVATAR="device/xiaomi/daisy/maintainer.png"
+
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
