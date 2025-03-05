@@ -6,8 +6,8 @@ jobs:
    steps:
       - run:
           command: |
-           git config --global user.name "ItsVixano"
-           git config --global user.email "vixanonew@gmail.com"
+           git config --global user.name "msm8953E"
+           git config --global user.email "ffjisan804@gmail.com"
            git config --global color.ui false
            wget https://raw.githubusercontent.com/ItsVixano/android_device_xiaomi_sakura_twrp/android-9.0-official/.circleci/twrp_ci.sh
            source twrp_ci.sh
